@@ -1,0 +1,43 @@
+
+h1 {
+	font-style: italic;
+}
+ol {
+	background-color: lightgray;
+	list-style-type: none; 
+	counter-reset: list1;
+	width: 600px;	
+	padding: 0;
+}
+
+ol li {
+	padding-left: 20px;
+}
+
+h2:before {
+	counter-increment: list1;
+	content: counter(list1)". ";
+}
+
+.Antarctica {
+	background-color: #7DCFED;
+}
+
+.Africa {
+	background-color: #A32929;
+}
+
+.Australia {
+	background-color: #3DB176;
+}
+
+.North_America {
+	background-color: #3D4BB1;
+}
+
+.South_America {
+	background-color: #02532A;
+}
+
+.Eurasia {
+	background-color: #E6A128
