@@ -16,9 +16,10 @@
     foreach ($animals as $continent => $animalList) {
         $resultList[$continent] = [];
         foreach ($animalList as $animal) {
-            if (count(explode(' ', $animal)) === 2) {
-                $firstWord[] = $continent.' '.explode(' ', $animal)[0];
-                $secondWord[] = explode(' ', $animal)[1];
+            $expl = explode(' ', $animal);
+            if (count($expl) === 2) {
+                $firstWord[] = $continent.' '.$expl[0];
+                $secondWord[] = $expl[1];
             }
         }
     }    
@@ -31,8 +32,9 @@
     
     foreach ($resultList as $continent => $animals) {
         foreach ($fantasyAnimals as $animal) {
-            if (explode(' ', $animal)[0] === $continent) {
-                $resultList[$continent][] = explode(' ', $animal)[1].' '. explode(' ', $animal)[2];
+            $expl = explode(' ', $animal);
+            if ($expl[0] === $continent) {
+                $resultList[$continent][] = $expl[1].' '.$expl[2];
             }
         }
     }}
